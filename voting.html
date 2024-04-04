@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting System</title>
+  <link rel="stylesheet" href="voting.css">
+</head>
+<body>
+
+     <script src="voting.js"></script>
+     <div class="voting-container">
+        <h2> Select the candidate you want to vote for.. </h2>
+
+
+        <form>
+          <div class="candidate">
+            <label for="candidate1">
+              <img src="candidate1.jpg" alt="Candidate 1">
+                <h3>#101</h3>
+              <span>Eagle</span>
+            </label>
+            <input type="radio" id="candidate1" name="candidate" value="001">
+          </div>
+          <div class="candidate">
+            <label for="candidate2">
+              <img src="candidate2.jpg" alt="Candidate 2">
+              <h3>#102</h3>
+              <span>Bear</span>
+            </label>
+            <input type="radio" id="candidate2" name="candidate" value="002">
+          </div>
+          <div class="candidate">
+            <label for="candidate3">
+              <img src="candidate3.jpg" alt="Candidate 3">
+              <h3>#103</h3>
+              <span>Wolf</span>
+            </label>
+            <input type="radio" id="candidate3" name="candidate" value="003">
+          </div>
+          <p id="selected-option"></p>
+          <button type="button" onclick="confirmSelection()">Confirm Selection</button>
+        </form>
+      </div>
+      
+</body>
+</html>
