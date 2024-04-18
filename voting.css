@@ -1,43 +1,48 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-}
-.voting-container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 120px;
-}
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.candidate {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.candidate label {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  cursor: pointer;
-}
-.candidate img {
-  width: 100px;
-  height: auto;
-  margin-right: 20px;
-}
-#selected-option {
-  text-align: center;
-  font-weight: bold;
-  display: none;
-}
-button {
-  display: block;
-  margin: 20px auto;
-}
+    font-family: Arial, sans-serif;
+    background-color: #c0e0f5;
+    background-image: url("https://www.shutterstock.com/image-vector/voting-hand-india-map-parliament-600w-2118886376.jpg") ;
+    background-size: cover;
+  }
+  .voting-container {
+    background-image: url("https://www.india.com/wp-content/uploads/2024/03/What-is-Election-Commission-of-India-4.jpg") ;
+    background-size: cover;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #eff5b1;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 120px;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .candidate {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .candidate label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+  }
+  .candidate img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+  }
+  #selected-option {
+    text-align: center;
+    font-weight: bold;
+    display: none;
+  }
+  button {
+    display:block;
+    margin: 20px auto;
+    background-color: rgb(48, 255, 16);
+  }
