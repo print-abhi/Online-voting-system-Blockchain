@@ -9,11 +9,18 @@ def generate_id():
 def generate_password():
     return ''.join(random.choices(string.ascii_letters + string.digits + string.punctuation, k=10))
 
-# User data with random IDs and passwords
+# Generate random age between 18 and 70
+def generate_age():
+    return random.randint(18, 70)
+
+# User data with random IDs, passwords, and ages
 users_data = {
-    "wolves": {"login_id": generate_id(), "password": generate_password(), "age": 30},
-    "bears": {"login_id": generate_id(), "password": generate_password(), "age": 35},
-    "eagles": {"login_id": generate_id(), "password": generate_password(), "age": 25}
+    "bj93": {"login_id": "bj93", "password": "9325", "age": generate_age()},
+    "congress25": {"login_id": "congress25", "password": "9765", "age": generate_age()},
+    "cpim90": {"login_id": "cpim90", "password": "7887", "age": generate_age()},
+    "user1": {"login_id": generate_id(), "password": generate_password(), "age": generate_age()},
+    "user2": {"login_id": generate_id(), "password": generate_password(), "age": generate_age()},
+    "user3": {"login_id": generate_id(), "password": generate_password(), "age": generate_age()}
 }
 
 def login():
