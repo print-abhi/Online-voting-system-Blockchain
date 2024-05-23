@@ -1,0 +1,46 @@
+import random
+import string
+
+# Generate random ID
+def generate_id():
+    return ''.join(random.choices(string.ascii_lowercase + string.digits, k=8))
+
+# Generate random password
+def generate_password():
+    return ''.join(random.choices(string.ascii_letters + string.digits + string.punctuation, k=10))
+
+# User data with random IDs and passwords
+users_data = {
+    "wolves": {"login_id": generate_id(), "password": generate_password(), "age": 30},
+    "bears": {"login_id": generate_id(), "password": generate_password(), "age": 35},
+    "eagles": {"login_id": generate_id(), "password": generate_password(), "age": 25}
+}
+
+def login():
+    print("Welcome to the Online Voting System!")
+    print("-----------------------------------")
+    attempts = 3
+    while attempts > 0:
+        login_id = input("Enter your login ID: ")
+        password = input("Enter your password: ")
+
+        # Check if login ID exists and password matches
+        if login_id in users_data and users_data[login_id]["password"] == password:
+            print("Login successful! Welcome,", login_id)
+            return True
+        else:
+            attempts -= 1
+            print("Invalid login ID or password. Please try again. Attempts left:", attempts)
+    
+    print("You've exceeded the maximum number of login attempts. Please try again later.")
+    return False
+
+# Main function
+def main():
+    if login():
+        print("Now you can access the online voting system.")
+    else:
+        print("Exiting the program.")
+
+if __name__ == "__main__":
+    main()
