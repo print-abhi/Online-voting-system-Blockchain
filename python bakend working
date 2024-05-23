@@ -1,46 +1,51 @@
-import random
-import string
+candidate1 = input("Enter 1st candidate name: ")
+candidate2 = input("Enter 2nd candidate name: ")
+candidate3 = input("Enter 3rd candidate name: ")
 
-# Generate random ID
-def generate_id():
-    return ''.join(random.choices(string.ascii_lowercase + string.digits, k=8))
+cand1_votes = 0
+cand2_votes = 0
+cand3_votes = 0
 
-# Generate random password
-def generate_password():
-    return ''.join(random.choices(string.ascii_letters + string.digits + string.punctuation, k=10))
+voters_id = [100, 101, 102, 103, 104, 105, 106, 107, 108, 109]
+no_of_voters = len(voters_id)
+print("Number of voters:", no_of_voters)
 
-# User data with random IDs and passwords
-users_data = {
-    "wolves": {"login_id": generate_id(), "password": generate_password(), "age": 30},
-    "bears": {"login_id": generate_id(), "password": generate_password(), "age": 35},
-    "eagles": {"login_id": generate_id(), "password": generate_password(), "age": 25}
-}
+voted = []
 
-def login():
-    print("Welcome to the Online Voting System!")
-    print("-----------------------------------")
-    attempts = 3
-    while attempts > 0:
-        login_id = input("Enter your login ID: ")
-        password = input("Enter your password: ")
-
-        # Check if login ID exists and password matches
-        if login_id in users_data and users_data[login_id]["password"] == password:
-            print("Login successful! Welcome,", login_id)
-            return True
+while True:
+    if voters_id == []:
+        print("Voting is over")
+        if cand1_votes > cand2_votes and cand1_votes > cand3_votes:
+            print(f"{candidate1} won the election with {cand1_votes} votes") 
+        elif cand2_votes > cand1_votes and cand2_votes > cand3_votes:       
+            print(f"{candidate2} won the election with {cand2_votes} votes")
+        elif cand3_votes > cand1_votes and cand3_votes > cand2_votes:
+            print(f"{candidate3} won the election with {cand3_votes} votes")
         else:
-            attempts -= 1
-            print("Invalid login ID or password. Please try again. Attempts left:", attempts)
-    
-    print("You've exceeded the maximum number of login attempts. Please try again later.")
-    return False
-
-# Main function
-def main():
-    if login():
-        print("Now you can access the online voting system.")
+            print("It's a tie!")
+        break
     else:
-        print("Exiting the program.")
-
-if __name__ == "__main__":
-    main()
+        voter = int(input("Enter your id: "))
+        if voter in voted:
+            print("You already voted")
+        elif voter in voters_id:
+            print(f"1. {candidate1}")
+            print(f"2. {candidate2}")
+            print(f"3. {candidate3}")
+            choice = int(input("Enter your choice: "))
+            if choice == 1:
+                cand1_votes += 1
+                print(f"You voted for {candidate1}")
+            elif choice == 2:
+                cand2_votes += 1
+                print(f"You voted for {candidate2}")
+            elif choice == 3:
+                cand3_votes += 1
+                print(f"You voted for {candidate3}")
+            else:
+                print("Invalid choice")
+                continue
+            voters_id.remove(voter)
+            voted.append(voter)
+        else:
+            print("You are not allowed to vote")
