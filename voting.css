@@ -6,7 +6,8 @@ body {
   margin: 0;
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding-top: 50px; /* Adjust padding to control how far down the container moves */
+  padding-top: 50px;
+  padding-bottom: 50px; /* Add padding below the page content */
 }
 
 .voting-container {
@@ -15,7 +16,7 @@ body {
   border-radius: 25px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 720px;
-  height: 1270px;
+  height: 1200px;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
   margin-top: 50px; /* Adjust this value to move the container down */
