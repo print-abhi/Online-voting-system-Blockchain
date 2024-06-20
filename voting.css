@@ -1,48 +1,67 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #c0e0f5;
-    background-image: url("https://www.shutterstock.com/image-vector/voting-hand-india-map-parliament-600w-2118886376.jpg") ;
-    background-size: cover;
-  }
-  .voting-container {
-    background-image: url("https://www.india.com/wp-content/uploads/2024/03/What-is-Election-Commission-of-India-4.jpg") ;
-    background-size: cover;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #eff5b1;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 120px;
-  }
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .candidate {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .candidate label {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    cursor: pointer;
-  }
-  .candidate img {
-    width: 100px;
-    height: auto;
-    margin-right: 20px;
-  }
-  #selected-option {
-    text-align: center;
-    font-weight: bold;
-    display: none;
-  }
-  button {
-    display:block;
-    margin: 20px auto;
-    background-color: rgb(48, 255, 16);
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.voting-container {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 720px;
+  height: 570px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.candidate {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.candidate label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+
+.candidate img {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 50%; /* Circular images */
+}
+
+#selected-option {
+  text-align: center;
+  font-weight: bold;
+  display: none;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px; /* Rounded button */
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

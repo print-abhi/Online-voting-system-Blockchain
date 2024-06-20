@@ -1,96 +1,90 @@
- *{
-   margin: 0;
-   padding: 0;
-   font-family: sans-serif;
+ /* Style for the entire page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.hero{
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0,0,0,0.4)),url(banner.jpg);
-  background-position: center;
-  background-size: cover;
-  position: absolute;
+
+/* Container for the login form */
+.login-container {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-.form-box{
-  width: 380px;
-  height: 480px;
-  position: relative;
-  margin: 6% auto;
-  background: #fff;
-  padding: 5px;
-  overflow: hidden;
+
+.login-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
-.button-box{
-  width: 220px;
-  margin: 35px auto;
-  position: relative;
-  box-shadow: 0 0 20px 9px #ff61241f;
-  border-radius: 30px;
+
+/* Header style */
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
 }
-.toggle-btn{
-  padding: 10px 30px;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  outline: none;
-  position: relative;
-}
-#btn{
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 110px;
-  height: 100%;
-  background: linear-gradient(to right, #ff105f,#ffad06);
-  border-radius: 30px;
-  transition: .5s;
-}
-.input-gruop{
-  top: 140px;
-  position:  absolute;
-  width: 280px;
-  transition: .3s;
-}
-.input-group {
-  top: 140px;
-  position: absolute;
-  width: 280px;
-  transition: .3s;
-}
-.input-field{
-  width: 90%;
-  padding: 10px 0;
-  margin: 5px 0;
-  border-left: 0;
-  border-top: 0;
-  border-right: 0;
-  border-bottom: 1px solid #999;
-  outline: none;
-  background: transparent;
-}
-.submit-btn{
-  width: 85%;
-  padding: 10px 30px;
-  cursor: pointer;
+
+/* Label style */
+label {
   display: block;
-  margin: auto;
-  background: linear-gradient(to right, #ff105f, #ffad06);
-  border: 0;
-  outline: none;
-  border-radius: 30px;
-}
-.check-box{
-  margin: 30px 10px 30px 0;
-}
-span{
+  text-align: left;
+  margin: 10px 0 5px;
   color: #777;
-  font-size: 12px;
-  bottom: 68px;
-  position: absolute;
 }
-#login{
-  left: 50px;
+
+/* Input fields style */
+input[type="text"],
+input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 16px;
+  box-sizing: border-box;
 }
-#register{
-  left: 450px;
+
+/* Button style */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Registration prompt style */
+.register {
+  margin-top: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.register a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.register a:hover {
+  color: #0056b3;
+  text-decoration: underline;
 }
