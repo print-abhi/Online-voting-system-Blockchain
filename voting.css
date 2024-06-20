@@ -4,7 +4,7 @@ body {
   align-items: flex-start; /* Start alignment for downward movement */
   height: 100vh;
   margin: 0;
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  background-color: #f5f7fa; /* Single background color */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-top: 50px;
   padding-bottom: 50px; /* Add padding below the page content */
@@ -16,7 +16,7 @@ body {
   border-radius: 25px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 720px;
-  height: 1200px;
+  height: 1200px; /* Adjusted height for content */
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
   margin-top: 50px; /* Adjust this value to move the container down */
