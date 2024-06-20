@@ -1,11 +1,12 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Start alignment for downward movement */
   height: 100vh;
   margin: 0;
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 50px; /* Adjust padding to control how far down the container moves */
 }
 
 .voting-container {
@@ -17,6 +18,7 @@ body {
   height: 1270px;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: 50px; /* Adjust this value to move the container down */
 }
 
 h2 {
@@ -42,7 +44,7 @@ h2 {
   width: 100px;
   height: auto;
   margin-right: 20px;
-  border-radius: 50%; /* Circular images */
+  border-radius: 50%; 
 }
 
 #selected-option {
@@ -64,13 +66,4 @@ button {
 
 button:hover {
   background-color: #0056b3;
-}
-//
-
-.candidate.slide-in {
-  transition: transform 0.3s ease; /* Adjust the duration and easing as needed */
-  transform: translateX(-100%); /* Start offscreen */
-}
-.candidate.slide-in.active {
-  transform: translateX(0); /* Slide in from the left */
 }
