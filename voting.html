@@ -34,17 +34,66 @@
         </label>
         <input type="radio" id="candidate3" name="candidate" value="003">
       </div>
-      <!-- New candidate NOTA -->
       <div class="candidate">
         <label for="candidate4">
-          <img src="Candidate4.jpg" alt="NOTA">
+          <img src="Candidate4.jpg" alt="Candidate 4">
           <h3>#104</h3>
-          <span>NOTA</span>
+          <span>AAP</span>
         </label>
         <input type="radio" id="candidate4" name="candidate" value="004">
       </div>
+      <div class="candidate">
+        <label for="candidate5">
+          <img src="Candidate5.jpg" alt="Candidate 5">
+          <h3>#105</h3>
+          <span>TMC</span>
+        </label>
+        <input type="radio" id="candidate5" name="candidate" value="005">
+      </div>
+      <div class="candidate">
+        <label for="candidate6">
+          <img src="Candidate6.jpg" alt="Candidate 6">
+          <h3>#106</h3>
+          <span>JD(U)</span>
+        </label>
+        <input type="radio" id="candidate6" name="candidate" value="006">
+      </div>
+      <!-- Additional candidates -->
+      <div class="candidate">
+        <label for="candidate7">
+          <img src="Candidate7.jpg" alt="Candidate 7">
+          <h3>#107</h3>
+          <span>TDP</span>
+        </label>
+        <input type="radio" id="candidate7" name="candidate" value="007">
+      </div>
+      <div class="candidate">
+        <label for="candidate8">
+          <img src="Candidate8.jpg" alt="Candidate 8">
+          <h3>#108</h3>
+          <span>BSP</span>
+        </label>
+        <input type="radio" id="candidate8" name="candidate" value="008">
+      </div>
+      <div class="candidate">
+        <label for="candidate9">
+          <img src="Candidate9.jpg" alt="Candidate 9">
+          <h3>#109</h3>
+          <span>SP</span>
+        </label>
+        <input type="radio" id="candidate9" name="candidate" value="009">
+      </div>
+      <div class="candidate">
+        <label for="candidate10">
+          <img src="Candidate10.jpg" alt="Candidate 10">
+          <h3>#110</h3>
+          <span>NOTA</span>
+        </label>
+        <input type="radio" id="candidate10" name="candidate" value="010">
+      </div>
+      
       <p id="selected-option"></p>
-      <button type="submit" onclick="confirmSelection()">Confirm Selection</button>
+      <button type="submit" onclick="return confirmSelection()">Confirm Selection</button>
     </form>
   </div>
 
@@ -52,7 +101,7 @@
     function confirmSelection() {
       var selectedOption = document.querySelector('input[name="candidate"]:checked');
       if (selectedOption) {
-        var candidateName = selectedOption.parentElement.textContent.trim();
+        var candidateName = selectedOption.parentElement.querySelector('span').textContent;
         document.getElementById('selected-option').textContent = "You've selected: " + candidateName;
         document.getElementById('selected-option').style.display = "block";
         alert("You have selected: " + candidateName);
