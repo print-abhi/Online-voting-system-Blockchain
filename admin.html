@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+
+    <style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.login-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  color: #777;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.register {
+  margin-top: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.register a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.register a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+    </style>
+    <script>
+        window.onload = function() {
+            alert("Welcome ! Please log here with your Metamask ID.");
+        };
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Admin Login</h2>
+        <form action="info.html" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Adress ID:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+    
+        </form>
+    </div>
+</body>
+</html>
