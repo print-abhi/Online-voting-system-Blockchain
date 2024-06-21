@@ -1,11 +1,11 @@
 # Define candidates and initialize vote counts
-candidate1 = input("Enter 1st candidate name: ")
-candidate2 = input("Enter 2nd candidate name: ")
-candidate3 = input("Enter 3rd candidate name: ")
+candidates = []
+votes = []
 
-cand1_votes = 0
-cand2_votes = 0
-cand3_votes = 0
+for i in range(1, 9):
+    candidate_name = input(f"Enter candidate {i} name: ")
+    candidates.append(candidate_name)
+    votes.append(0)
 
 # List of voters' IDs
 voters_id = [100, 101, 102, 103, 104, 105, 106, 107, 108, 109]
@@ -17,17 +17,17 @@ voted = []
 
 while True:
     # Check if all voters have voted
-    if voters_id == []:
+    if len(voters_id) == 0:
         print("Voting is over")
+
         # Determine the winner
-        if cand1_votes > cand2_votes and cand1_votes > cand3_votes:
-            print(f"{candidate1} won the election with {cand1_votes} votes")
-        elif cand2_votes > cand1_votes and cand2_votes > cand3_votes:
-            print(f"{candidate2} won the election with {cand2_votes} votes")
-        elif cand3_votes > cand1_votes and cand3_votes > cand2_votes:
-            print(f"{candidate3} won the election with {cand3_votes} votes")
+        max_votes = max(votes)
+        winners = [candidates[i] for i, v in enumerate(votes) if v == max_votes]
+
+        if len(winners) == 1:
+            print(f"{winners[0]} won the election with {max_votes} votes")
         else:
-            print("It's a tie!")
+            print(f"It's a tie between {' and '.join(winners)} with {max_votes} votes each!")
         break
     else:
         # Accept voter ID
@@ -36,25 +36,18 @@ while True:
             print("You already voted")
         elif voter in voters_id:
             # Display candidates
-            print(f"1. {candidate1}")
-            print(f"2. {candidate2}")
-            print(f"3. {candidate3}")
+            for i, candidate in enumerate(candidates, start=1):
+                print(f"{i}. {candidate}")
             # Accept vote
             choice = int(input("Enter your choice: "))
-            if choice == 1:
-                cand1_votes += 1
-                print(f"You voted for {candidate1}")
-            elif choice == 2:
-                cand2_votes += 1
-                print(f"You voted for {candidate2}")
-            elif choice == 3:
-                cand3_votes += 1
-                print(f"You voted for {candidate3}")
+            if 1 <= choice <= 8:
+                votes[choice - 1] += 1
+                print(f"You voted for {candidates[choice - 1]}")
             else:
                 print("Invalid choice")
                 continue
             # Update voter lists
             voters_id.remove(voter)
             voted.append(voter)
-        else:11
+        else:
             print("You are not allowed to vote")
