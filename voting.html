@@ -58,7 +58,6 @@
         </label>
         <input type="radio" id="candidate6" name="candidate" value="006">
       </div>
-      <!-- Additional candidates -->
       <div class="candidate">
         <label for="candidate7">
           <img src="Candidate7.jpg" alt="Candidate 7">
@@ -107,11 +106,11 @@
         var candidateName = selectedOption.parentElement.querySelector('span').textContent;
         document.getElementById('selected-option').textContent = "You've selected: " + candidateName;
         document.getElementById('selected-option').style.display = "block";
-        alert("You have selected: " + candidateName);
-        return true; // Allow form submission
+        alert("You have selected: " + candidateName  );
+        return true; 
       } else {
         alert("Please select a candidate before confirming.");
-        return false; // Prevent form submission
+        return false;
       }
     }
   </script>

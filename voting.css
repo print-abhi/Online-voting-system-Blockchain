@@ -1,13 +1,13 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Start alignment for downward movement */
+  align-items: flex-start; 
   height: 100vh;
   margin: 0;
-  background-color: #f5f7fa; /* Single background color */
+  background-color: #f5f7fa;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-top: 50px;
-  padding-bottom: 50px; /* Add padding below the page content */
+  padding-bottom: 50px;
 }
 
 .voting-container {
@@ -16,10 +16,10 @@ body {
   border-radius: 25px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 720px;
-  height: 1200px; /* Adjusted height for content */
+  height: 1200px; 
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
-  margin-top: 50px; /* Adjust this value to move the container down */
+  margin-top: 50px; 
 }
 
 h2 {
@@ -61,7 +61,7 @@ button {
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 10px; /* Rounded button */
+  border-radius: 10px;
   cursor: pointer;
 }
 
