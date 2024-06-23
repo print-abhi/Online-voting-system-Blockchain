@@ -8,8 +8,6 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: url("image.jpg");
 }
-
-/* Container for the login form */
 .login-container {
   background: white;
   padding: 30px 25px;
