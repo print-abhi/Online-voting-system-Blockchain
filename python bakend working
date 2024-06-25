@@ -1,161 +1,42 @@
-# Define candidates and initialize vote counts
+candidates = []
+votes = []
 
-candidate1 = input("Enter 1st candidate name: ")
+for i in range(1, 9):
+    candidate_name = input(f"Enter candidate {i} name: ")
+    candidate.append(candidate_name)
+    votes.append(0)
 
-candidate2 = input("Enter 2nd candidate name: ")
-
-candidate3 = input("Enter 3rd candidate name: ")
-
-Candidate 4 name: candidate4 = input("Enter 4th candidate name: ")
-
-Candidate5 = input("Enter 5th candidate name: ")
-
-candidate6 = input("Enter 6th candidate name: ")
-
-Candidate7 = input("Enter 7th candidate name: ")
-
-candidate8 = input("Enter 8th candidate name: ")
-
-cand1_votes = 0
-
-cand2_votes = 0
-
-cand3_votes = 0
-
-cand4_votes = 0
-
-cand5_votes = 0
-
-cand6_votes = 0
-
-cand7_votes = 0
-
-cand8_votes = 0
-
-# List of voters' IDs
-
-Voters_id = [100, 101, 102, 103, 104, 105, 106, 107, 108, 109]
-
+voters_id = [100, 101, 102, 103, 104, 105, 106, 107, 108, 109]
 no_of_voters = len(voters_id)
-
-Number of voters: print("Number of voters:", no_of_voters)
-
-# List to keep track of who has voted
+print("Number of voters:", no_of_voters)
 
 voted = []
 
 while True:
+    if len(voters_id) == 0:
+        print("Voting is over")
+        
+        max_votes = max(votes)
+        winners = [candidates[i] for i, v in enumerate(votes) if v == max_votes]
 
-# Check if all the voters have voted
+        if len(winners) == 1:
+            print(f"{winners[0]} won the election with {max_votes} votes")
+        else:
+            print(f"It's a tie between {' and '.join(winners) } with {max_votes} votes
+        break
+    else:
+        voter = int(input("Enter your ID: "))
+        if voter in voted:
+            print("You already voted")
+        elif voter in voters_id:
+            for i, candidate in enumerate(candidates, start=1):
+                print(f"{i}. {candidates[choice - 1]}")
+            else:
+                print("Invalid choice")
+                continue
 
-if len(voters_id) == 0:
-
-print("Voting is over")
-
-# Determine winner
-
-These votes are for candidates: votes = [cand1_votes, cand2_votes, cand3_votes, cand4_votes, cand5_votes, cand6_votes, cand7_votes, cand8_votes]
-
-candidates = [candidate1, candidate2, candidate3, candidate4, candidate5, candidate6, candidate7, candidate8]
-
-max_votes = max(votes)
-
-winners = [candidates[i] for i, v in enumerate(votes) if v == max_votes]
-
-if len(winners) == 1:
-
-print(f"{winners[0]} wins the election with {max_votes} votes")
-
-else:
-
-print(f"It's a tie between {' and '.join(winners)} with {max_votes} votes each!")
-
-break
-
-else:
-
-# Accept voter ID
-
-Voter = int(input("Enter your ID: "))
-
-if voter in voted:
-
-print("You already voted")
-
-elif voter in voters_id:
-
-# Display candidates
-
-print(f"1. {candidate1}")
-
-print(f"2. {candidate2}")
-
-print(f"3. {candidate3}")
-
-print(f"4. {candidate4}")
-
-print(f"5. {candidate5}")
-
-print(f"6. {candidate6}")
-
-print(f"7. {candidate7}")
-
-print(f"8. {candidate8}")
-
-# Accept vote
-
-choice = int(input("Enter your choice: "))
-
-if choice == 1:
-
-Cand1_votes += 1
-
-print(f"You voted for {candidate1}")
-
-elif choice == 2:
-
-cand2_votes += 1
-
-print(f"You voted for {candidate2}")
-
-elif choice == 3:
-
-Cand3_votes += 1
-
-print(f"You voted for {candidate3}")
-
-elif choice == 4:
-
-cand4_votes += 1
-
-print(f"You voted for {candidate4}")
-
-elif choice == 5:
-
-cand5_votes +=1
-
-print(f"You voted for {candidate5}")
-
-elif choice == 6:
-
-Cand6_votes += 1
-
-print(f"You voted for {candidate6}")
-
-elif choice == 7:
-
-cand7_votes += 1
-
-print(f"You voted for {candidate7}")
-
-else if choice == 8:
-
-cand8_votes += 1
-
-print(f"You voted for {candidate8}")
-
-else:
-
-print("Invalid choice")
-
-continue # Update voter lists voters_id.remove(voter) voted.append(voter) else: print("You are Not eligible to vote")
+            voters_id.remove(voter)
+            voted.append(voter)
+        else:
+            print("You are not allowed to vote")
+                
