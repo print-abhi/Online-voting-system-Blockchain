@@ -22,7 +22,7 @@ while True:
         if len(winners) == 1:
             print(f"{winners[0]} won the election with {max_votes} votes")
         else:
-            print(f"It's a tie between {' and '.join(winners) } with {max_votes} votes
+            print(f"It's a tie between {' and '.join(winners) } with {max_votes} votes)")
         break
     else:
         voter = int(input("Enter your ID: "))
