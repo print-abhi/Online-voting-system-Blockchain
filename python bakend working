@@ -1,9 +1,10 @@
 candidates = []
 votes = []
 
+#collect candidate names
 for i in range(1, 9):
     candidate_name = input(f"Enter candidate {i} name: ")
-    candidate.append(candidate_name)
+    candidates.append(candidate_name)
     votes.append(0)
 
 voters_id = [100, 101, 102, 103, 104, 105, 106, 107, 108, 109]
@@ -30,13 +31,13 @@ while True:
             print("You already voted")
         elif voter in voters_id:
             for i, candidate in enumerate(candidates, start=1):
-                print(f"{i}. {candidates[choice - 1]}")
-            else:
-                print("Invalid choice")
-                continue
-
-            voters_id.remove(voter)
-            voted.append(voter)
-        else:
-            print("You are not allowed to vote")
-                
+                print(f"{i}. {candidate}")
+            choice = int(input("Enter your choice: "))
+            if 1<= choice <= len(candidates):
+               votes[choice - 1] += 1
+               voters_id.remove(voter)
+               voted.append(voter)
+           else:
+               print("Invalid choice")
+       else:
+           print("You are not allowed to vote")
